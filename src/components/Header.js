@@ -1,9 +1,8 @@
 import React from "react";
 function Header(props) {
     return(
-        <div style={{background:'yellow',padding:20}}>
-            <h1>{props.name}</h1>
-            <p>{props.title}</p>
+        <div>
+            <h1>Welcome to Courses Application</h1>
         </div>
     );
 }

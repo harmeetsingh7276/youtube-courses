@@ -4,6 +4,8 @@ import { ToastContainer, toast } from 'react-toastify';
 import './App.css';
 import Header from './components/Header';
 import {Button} from "reactstrap";
+import Home from './components/Home';
+import Course from './components/Course';
 
 function App() {
   const btnHandle=()=>{
@@ -14,9 +16,9 @@ function App() {
   return (
     <div>
       <ToastContainer/>
-      <h1>BootStrap components</h1>
-      <Button color='primary' outline onClick={btnHandle}>First React Button</Button>
-     
+      <Home/>
+      <Course course={{title:"Java",description:"Java Course"}}/>
+      <Course course={{title:"Django",description:"Django Course"}}/>
     </div>
   );
 }
