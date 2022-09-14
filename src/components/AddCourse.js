@@ -1,7 +1,11 @@
-import React, { Fragment } from "react";
+import React, { Fragment,useEffect, useState } from "react";
 import {Button, Container, Form, FormGroup, Input} from "reactstrap";
 
 const AddCourse=()=>{
+    useEffect(()=>{
+        document.title="Add Course";
+    },[])
+    const[course,setCourse]=useState({});
     return(
         <Fragment>
             <h1>Fill Course Details</h1>
@@ -19,7 +23,7 @@ const AddCourse=()=>{
                     <Input type="textarea" placeholder="Enter description here" name="description" id="description" style={{height:120}}/>
                 </FormGroup>
                 <Container className="text-center">
-                    <Button color="success">Add Course</Button>
+                    <Button color="success" type="submit">Add Course</Button>
                     <Button color="warning">Clear</Button>
                 </Container>
             </Form>

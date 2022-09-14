@@ -1,8 +1,11 @@
-import React from "react";
+import React,{useEffect} from "react";
 import {Button,Container } from 'reactstrap';
 
 
 const Home=()=>{
+    useEffect(()=>{
+        document.title="Home";
+    },[])
     return(
         <div className="text-center">
             
