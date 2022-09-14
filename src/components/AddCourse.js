@@ -2,6 +2,7 @@ import React, { Fragment, useEffect, useState } from "react";
 import { Button, Container, Form, FormGroup, Input } from "reactstrap";
 import axios from "axios";
 import base_url from "../api/bootapi";
+import { toast } from "react-toastify";
 
 const AddCourse = () => {
     useEffect(() => {
@@ -23,9 +24,11 @@ const AddCourse = () => {
             (response)=>{
                 console.log(response);
                 console.log("success");
+                toast.success("Course Added!",{position:"bottom-center"});
             },(error)=>{
                 console.log(error);
                 console.log("error");
+                toast.error("Something went wrong!",{position:"bottom-center"});
             }
         )
     };
@@ -55,7 +58,7 @@ const AddCourse = () => {
                 </FormGroup>
                 <Container className="text-center">
                     <Button color="success" type="submit">Add Course</Button>
-                    <Button color="warning">Clear</Button>
+                    <Button color="warning" type="reset" onClick={()=>{setCourse({});}}>Clear</Button>
                 </Container>
             </Form>
         </Fragment>

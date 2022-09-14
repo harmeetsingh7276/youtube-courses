@@ -10,6 +10,10 @@ const AllCourses=()=>{
         getAllCoursesFromServer();
     },[]);
 
+    //to stop the deleted course to be view after refreshing even if not reloaded
+    const updateCourses=(id)=>{
+        setCourses(courses.filter((c)=>c.id!=id));
+    }
 
     //Call to server 
     const getAllCoursesFromServer=()=>{
@@ -35,7 +39,7 @@ const AllCourses=()=>{
 
             {
                 courses.length>0
-                ?courses.map((item)=> <Course key={item.id} course={item}/>)
+                ?courses.map((item)=> <Course key={item.id} course={item} update={updateCourses}/>)
                 :"No Courses"
             }
         </div>
