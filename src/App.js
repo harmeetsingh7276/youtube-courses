@@ -3,9 +3,11 @@ import React, { Component }  from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import './App.css';
 import Header from './components/Header';
-import {Button} from "reactstrap";
+import {Button, Col, Container, Row} from "reactstrap";
 import Home from './components/Home';
-import Course from './components/Course';
+import AllCourses from './components/Allcourses';
+import AddCourse from './components/AddCourse';
+import Menus from './components/Menus';
 
 function App() {
   const btnHandle=()=>{
@@ -16,9 +18,17 @@ function App() {
   return (
     <div>
       <ToastContainer/>
-      <Home/>
-      <Course course={{title:"Java",description:"Java Course"}}/>
-      <Course course={{title:"Django",description:"Django Course"}}/>
+      <Container>
+        <Header/>
+        <Row>
+          <Col md={4}>
+          <Menus/>
+          </Col>
+          <Col md={8}>
+          <Home/>
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
 }

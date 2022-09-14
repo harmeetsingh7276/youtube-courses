@@ -6,7 +6,7 @@ const Home=()=>{
     return(
         <div className="text-center">
             
-                <h1 className="display-3">Learning ReactJS</h1>
+                <h1>Learning ReactJS</h1>
                 <p>It's priting with the help of Jumbotron</p>
                 <Container>
                     <Button outline color="primary">Start Using</Button>
