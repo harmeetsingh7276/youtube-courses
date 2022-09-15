@@ -34,8 +34,8 @@ const AllCourses=()=>{
     const [courses,setCourses]=useState([]);
     return(
         <div>
-            <h1>All Courses</h1>
-            <p>List of Courses</p>
+            <h1 className='text-center'>All Courses</h1>
+            <p className='text-center'>List of Courses</p>
 
             {
                 courses.length>0

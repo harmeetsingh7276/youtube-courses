@@ -9,6 +9,8 @@ import AllCourses from './components/Allcourses';
 import AddCourse from './components/AddCourse';
 import Menus from './components/Menus';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
+
+
 function App() {
   const btnHandle = () => {
     toast.error("This is my first toast", {
@@ -24,6 +26,7 @@ function App() {
           <Row>
             <Col md={4}>
               <Menus />
+              
             </Col>
             <Col md={8}>
               <Routes>
